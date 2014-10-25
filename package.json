@@ -1,0 +1,32 @@
+{
+  "name": "cj2hyper",
+  "version": "0.1.0",
+  "description": "Collection+JSON to hyper+json transform",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hypergroup/cj2hyper.git"
+  },
+  "keywords": [
+    "hypermedia",
+    "collection+json",
+    "hyper+json",
+    "json"
+  ],
+  "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hypergroup/cj2hyper/issues"
+  },
+  "homepage": "https://github.com/hypergroup/cj2hyper",
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.1.0"
+  }
+}

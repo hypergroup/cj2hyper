@@ -1,0 +1,161 @@
+{
+  "href": "http://example.org/friends/",
+  "feed": {
+    "href": "http://example.org/friends/rss"
+  },
+  "create": {
+    "enctype": "application/collection+json",
+    "action": "http://example.org/friends/",
+    "method": "POST",
+    "input": {
+      "full-name": {
+        "value": "",
+        "prompt": "Full Name"
+      },
+      "email": {
+        "value": "",
+        "prompt": "Email"
+      },
+      "blog": {
+        "value": "",
+        "prompt": "Blog"
+      },
+      "avatar": {
+        "value": "",
+        "prompt": "Avatar"
+      }
+    }
+  },
+  "collection": [
+    {
+      "href": "http://example.org/friends/jdoe",
+      "blog": {
+        "href": "http://examples.org/blogs/jdoe",
+        "prompt": "Blog"
+      },
+      "avatar": {
+        "src": "http://examples.org/images/jdoe",
+        "prompt": "Avatar"
+      },
+      "full-name": "J. Doe",
+      "email": "jdoe@example.org",
+      "update": {
+        "method": "PUT",
+        "action": "http://example.org/friends/jdoe",
+        "enctype": "application/collection+json",
+        "input": {
+          "full-name": {
+            "value": "J. Doe",
+            "prompt": "Full Name"
+          },
+          "email": {
+            "value": "jdoe@example.org",
+            "prompt": "Email"
+          },
+          "blog": {
+            "value": "http://examples.org/blogs/jdoe",
+            "prompt": "Blog"
+          },
+          "avatar": {
+            "value": "http://examples.org/images/jdoe",
+            "prompt": "Avatar"
+          }
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "action": "http://example.org/friends/jdoe"
+      }
+    },
+    {
+      "href": "http://example.org/friends/msmith",
+      "blog": {
+        "href": "http://examples.org/blogs/msmith",
+        "prompt": "Blog"
+      },
+      "avatar": {
+        "src": "http://examples.org/images/msmith",
+        "prompt": "Avatar"
+      },
+      "full-name": "M. Smith",
+      "email": "msmith@example.org",
+      "update": {
+        "method": "PUT",
+        "action": "http://example.org/friends/msmith",
+        "enctype": "application/collection+json",
+        "input": {
+          "full-name": {
+            "value": "M. Smith",
+            "prompt": "Full Name"
+          },
+          "email": {
+            "value": "msmith@example.org",
+            "prompt": "Email"
+          },
+          "blog": {
+            "value": "http://examples.org/blogs/msmith",
+            "prompt": "Blog"
+          },
+          "avatar": {
+            "value": "http://examples.org/images/msmith",
+            "prompt": "Avatar"
+          }
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "action": "http://example.org/friends/msmith"
+      }
+    },
+    {
+      "href": "http://example.org/friends/rwilliams",
+      "blog": {
+        "href": "http://examples.org/blogs/rwilliams",
+        "prompt": "Blog"
+      },
+      "avatar": {
+        "src": "http://examples.org/images/rwilliams",
+        "prompt": "Avatar"
+      },
+      "full-name": "R. Williams",
+      "email": "rwilliams@example.org",
+      "update": {
+        "method": "PUT",
+        "action": "http://example.org/friends/rwilliams",
+        "enctype": "application/collection+json",
+        "input": {
+          "full-name": {
+            "value": "R. Williams",
+            "prompt": "Full Name"
+          },
+          "email": {
+            "value": "rwilliams@example.org",
+            "prompt": "Email"
+          },
+          "blog": {
+            "value": "http://examples.org/blogs/rwilliams",
+            "prompt": "Blog"
+          },
+          "avatar": {
+            "value": "http://examples.org/images/rwilliams",
+            "prompt": "Avatar"
+          }
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "action": "http://example.org/friends/rwilliams"
+      }
+    }
+  ],
+  "search": {
+    "method": "GET",
+    "input": {
+      "search": {
+        "value": ""
+      }
+    },
+    "action": "http://example.org/friends/search",
+    "prompt": "Search"
+  }
+}
