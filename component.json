@@ -1,0 +1,13 @@
+{
+  "name": "cj2hyper",
+  "repo": "hypergroup/cj2hyper",
+  "description": "Collection+JSON to hyper+json transform",
+  "version": "0.1.1",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "remotes": []
+}
