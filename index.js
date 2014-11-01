@@ -26,8 +26,8 @@ module.exports = function(resource) {
 
   get('queries', root, []).forEach(function(query) {
     var rel = get('rel', query);
-    // TODO is rel required?
     if (!rel) return;
+
     var form = hyperObj[rel] = {
       method: 'GET',
       input: {}
@@ -54,13 +54,12 @@ module.exports = function(resource) {
  */
 
 function mergeItem(doc, item, template, isRoot) {
-  // TODO is href required?
   var href = doc.href = get('href', item);
 
   get('links', item, []).forEach(function(link) {
     var rel = get('rel', link);
-    // TODO is rel required?
     if (!rel) return;
+
     var render = get('render', link);
     var out = doc[rel] = {};
     Object.keys(link).forEach(function(key) {
@@ -72,21 +71,14 @@ function mergeItem(doc, item, template, isRoot) {
 
   get('data', item, []).forEach(function(datum) {
     var name = get('name', datum);
-    // TODO is name required?
     if (!name) return;
-    /**
-     * TODO consider an extension to hyper+json that allows for metadata
-     *
-     *   {
-     *     "property": {
-     *       "@value": 42,
-     *       "prompt": "Secret to the universe"
-     *     }
-     *   }
-     *
-     * For now we'll just use "value"
-     */
-    doc[name] = get('value', datum);
+
+    doc[name] = Object.keys(datum).reduce(function(acc, key) {
+      if (key === 'name') return acc;
+      if (key === 'value') acc.data = datum[key];
+      else acc[key] = datum[key];
+      return acc;
+    }, {});
   });
 
   if (template) doc.update = {
@@ -128,15 +120,15 @@ function transformInputs(inputs, values) {
 
 function mergeInput(inputs, values, input) {
   var name = get('name', input);
-  // TODO is name required?
   if (!name) return;
+
   var out = inputs[name] = {};
   Object.keys(input).forEach(function(key) {
     if (key === 'name') return;
     if (!values || key !== 'value') return out[key] = input[key];
     var value = values[name];
     if (!value || typeof value !== 'object') return out.value = value;
-    out.value = value.href || value.src || value['@value'];
+    out.value = value.href || value.src || value.data;
   });
 }
 

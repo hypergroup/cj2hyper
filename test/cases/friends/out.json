@@ -37,8 +37,14 @@
         "src": "http://examples.org/images/jdoe",
         "prompt": "Avatar"
       },
-      "full-name": "J. Doe",
-      "email": "jdoe@example.org",
+      "full-name": {
+        "data": "J. Doe",
+        "prompt": "Full Name"
+      },
+      "email": {
+        "data": "jdoe@example.org",
+        "prompt": "Email"
+      },
       "update": {
         "method": "PUT",
         "action": "http://example.org/friends/jdoe",
@@ -77,8 +83,14 @@
         "src": "http://examples.org/images/msmith",
         "prompt": "Avatar"
       },
-      "full-name": "M. Smith",
-      "email": "msmith@example.org",
+      "full-name": {
+        "data": "M. Smith",
+        "prompt": "Full Name"
+      },
+      "email": {
+        "data": "msmith@example.org",
+        "prompt": "Email"
+      },
       "update": {
         "method": "PUT",
         "action": "http://example.org/friends/msmith",
@@ -117,8 +129,14 @@
         "src": "http://examples.org/images/rwilliams",
         "prompt": "Avatar"
       },
-      "full-name": "R. Williams",
-      "email": "rwilliams@example.org",
+      "full-name": {
+        "data": "R. Williams",
+        "prompt": "Full Name"
+      },
+      "email": {
+        "data": "rwilliams@example.org",
+        "prompt": "Email"
+      },
       "update": {
         "method": "PUT",
         "action": "http://example.org/friends/rwilliams",
